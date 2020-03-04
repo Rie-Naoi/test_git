@@ -8,8 +8,8 @@ git version
 
 #gitの初期設定
 ##ターミナルで以下入力
-git config --global user.name Rie-Naoi
-git config --global user.emai rie.naoi03@g.softbank.co.jp
+git config --global user.name ”ユーザの名前"
+git config --global user.emai "ユーザのメールアドレス”
 
 #ローカルリポジトリの新規作成
 ##ターミナルで以下入力
@@ -32,7 +32,7 @@ git init
 #githubにアップロードする
 gitにリポジトリを作成してから以下ターミナルで入力する
 リポジトリを作成するとコピペできる文章出てくる
-git remote add origin https://hithub.com/Rie-Naoi/test_git/git
+git remote add origin https://hithub.com/Rie-Naoi/test_git.git
 git push -u origin master
 
 #わかりやすいコミットメッセージ
