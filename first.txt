@@ -1,0 +1,45 @@
+Gitの練習だよ。
+
+#Gitのバージョン確認
+##Gitの公式ページで現在なんのバージョンなのか確認する
+https://git-scm.com/
+##ターミナルで以下入力
+git version
+
+#gitの初期設定
+##ターミナルで以下入力
+git config --global user.name Rie-Naoi
+git config --global user.emai rie.naoi03@g.softbank.co.jp
+
+#ローカルリポジトリの新規作成
+##ターミナルで以下入力
+git init
+（initは、initializeの略）
+
+
+#ターミナルコマンドまとめ
+##cd
+ディレクトリの移動
+例：デスクトップへ移動
+cd ~/desktop
+例：デスクトップに移動後、デスクトップ上にある「test_git」フォルダに移動
+cd test_git
+例：デスクトップの「test_git」へ移動
+cd ~/desktop/test_git
+
+##ls
+ディレクトリの内容を表示
+ls -aコマンドで、隠しファイルを含めたディレクトリ全内容を表示する
+ls -a .git/コマンドで、隠しファイルの中身まで見ることができる
+
+##mkdir
+ディレクトリを新規作成
+
+##rm
+ファイルを削除
+
+##cp
+ファイルをコピー
+
+##mv
+ファイルの移動とファイル名の変更
