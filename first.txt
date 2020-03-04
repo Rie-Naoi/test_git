@@ -53,7 +53,7 @@ git log --oneline -n 3 /１行で表示して最新の３つだけ
 
 #git diff
 differenceの略
-git diff /ステージとの差分
+git diff /ローカルとステージ内容との差分を表示
 git diff head /ステージとコミットの
 ちょっと
 
