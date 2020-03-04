@@ -37,6 +37,10 @@ git push -u origin master
 2行目：空行
 3行目：変更した理由
 
+#流れ
+git status
+git add .
+git commit -v
 
 #ターミナルコマンドまとめ
 ##cd
