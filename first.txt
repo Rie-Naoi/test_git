@@ -16,6 +16,28 @@ git config --global user.emai rie.naoi03@g.softbank.co.jp
 git init
 （initは、initializeの略）
 
+#Vimエディタの使い方（commitの編集方法）
+1 ターミナルでgit commitを入力する
+2 Vimエディタが立ち上がる
+3 半角英数字にニュ力を切り替える
+4 i を入力する（挿入モードになる）
+5 コミットメッセージを入力する
+6 「ESC」を押す（ノーマルモードになる）
+7 「:wq」を入力してエンターを押す
+8 commitメッセージを保存してエディタを閉じる
+
+#githubにアップロードする
+gitにリポジトリを作成してから以下ターミナルで入力する
+リポジトリを作成するとコピペできる文章出てくる
+git remote add origin https://hithub.com/Rie-Naoi/test_git/git
+git push -u origin master
+
+#わかりやすいコミットメッセージ
+1行目：変更内容の要約
+2行目：空行
+3行目：変更した理由
+
+
 
 #ターミナルコマンドまとめ
 ##cd
