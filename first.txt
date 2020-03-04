@@ -23,8 +23,11 @@ git init
 4 i を入力する（挿入モードになる）
 5 コミットメッセージを入力する
 6 「ESC」を押す（ノーマルモードになる）
-7 「:wq」を入力してエンターを押す
+7 「:q」を入力してエンターを押す
 8 commitメッセージを保存してエディタを閉じる
+※「j」上に移動、「k」下に移動
+
+
 
 #githubにアップロードする
 gitにリポジトリを作成してから以下ターミナルで入力する
@@ -41,6 +44,18 @@ git push -u origin master
 git status
 git add .
 git commit -v
+
+#git logの便利なオプション
+git log --oneline /一行で表示する
+git log -p index.html /ファイルの差分を表示する
+git log -n 3 /最新のコミット３つまで表示される
+git log --oneline -n 3 /１行で表示して最新の３つだけ
+
+#git diff
+differenceの略
+git diff /ステージとの差分
+git diff head /ステージとコミットの差分
+
 
 #ターミナルコマンドまとめ
 ##cd
