@@ -54,8 +54,8 @@ git log --oneline -n 3 /１行で表示して最新の３つだけ
 #git diff
 differenceの略
 git diff /ステージとの差分
-git diff head /ステージとコミットの差分
-
+git diff head /ステージとコミットの
+ちょっと
 
 #ターミナルコマンドまとめ
 ##cd
