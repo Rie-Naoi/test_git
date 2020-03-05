@@ -62,3 +62,7 @@ https://webrandum.net/iterm2/
   https://www.sourcetreeapp.com/
 ・GitKraken / 渡辺さんが教えてくれたやつだ。Udemy終わったら入れてみよう
   https://www.gitkraken.com/
+
+#07 Gitのインストール（Win）
+私が利用している環境はMacなので今回は聞き流す。
+問題があれば、gitのサイトで確認すれば良いと思われる。
