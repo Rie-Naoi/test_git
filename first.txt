@@ -124,3 +124,5 @@ ls -a .git/コマンドで、隠しファイルの中身まで見ることがで
   https://git-scm.com/book/ja/v2
 ・アトラシアン社のGitチュートリアル（英語の模様）
   https://www.atlassian.com/ja/git
+
+#Udemy購入許可が出たので中級編に突入！2020/03/05
