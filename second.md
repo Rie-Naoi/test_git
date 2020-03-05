@@ -77,16 +77,5 @@ https://eng-entrance.com/texteditor-vscode
 →日本語化へ設定変更
 →マークダウン拡張設定
 https://qiita.com/kumapo0313/items/a59df3d74a7eaaaf3137
-
-
-colspan `>` or `empty cell`:
-| a   | b   |
-| --- | --- |
-| >   | 1   |
-| 2   |
-
-rowspan `^`:
-| a   | b   |
-| --- | --- |
-| 1   | 2   |
-| ^   | 4   |
+→環境構築完了！拡張子をtxtからmdに変更した。
+まだマークダウン形式ですべてかけてはいないが。
