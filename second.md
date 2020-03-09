@@ -265,3 +265,37 @@ Homebrewを使ってインストールする。
 
 masterブランチ上での最後のコミットが指しているツリーファイルの中身を表示
 `git cat-file -p master^{tree}`
+
+---
+
+## 18 Gitを始めよう
+
+### ローカルリポジトリの作成
+
+- ターミナルを開く
+
+- プロジェクトのディレクトリ作成
+
+```bash
+cd ~/desktop
+mkdir udemy_code
+cd udemy_code
+mkdir git_tutorial
+```
+
+- ディレクトリに移動
+
+```bash
+cd git_tutorial
+```
+
+- ローカルリポジトリの作成
+
+.gitディレクトリが作成される
+（リポジトリ、インデックスファイル、設定ファイル）
+
+```bash
+git init
+```
+
+---
