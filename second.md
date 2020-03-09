@@ -137,29 +137,53 @@ Chris Wanstrathが友達とコードをシェアしやすいものを作った�
 >これも設定終わっているので映像流してみる。
 復習のため、以下コードを記載しておく。
 
-ユーザー名の登録
-`git config --global user.name "***"`
+- ユーザー名の登録
 
-メールアドレスの登録
-`git config --global user.email "**@**.com"`
+    ```bash
+    git config --global user.name "***"
+    ```
 
-デフォルトコードエディタの登録（VSCode)
-`git congig --global core.editor 'code --wait'`
+- メールアドレスの登録
 
-ユーザー名の確認
-`git config user.name`
+    ```bash
+    git config --global user.email "**@**.com"
+    ```
 
-メールアドレスの確認
-`git config user.email`
+- デフォルトコードエディタの登録（VSCode)
 
-デフォルトコードエディタの確認
-`git config core.editor`
+    ```bash
+    git congig --global core.editor 'code --wait'
+    ```
 
-一度に確認したい場合
-`git config --list`
+- ユーザー名の確認
 
-みやすく表示できる（ファイルの内容を表示する）
-`cat ~/.gitconfig`
+    ```bash
+    git config user.name
+    ```
+
+- メールアドレスの確認
+
+    ```bash
+    git config user.email
+    ```
+
+- デフォルトコードエディタの確認
+
+    ```bash
+    git config core.editor
+    ```
+
+- 一度に確認したい場合
+
+    ```bash
+    git config --list
+    ```
+
+- みやすく表示できる（ファイルの内容を表示する）
+
+    ```bash
+    cat ~/.gitconfig
+    ```
 
 ---
 
@@ -250,21 +274,35 @@ blob（ブロブ）というのはカタマリという意味。
 ヘッダー（ファイル内容の文字数など、ファイルのメタ情報）とファイル内容を、SHA-1というハッシュ関数で40文字の英数字に変換したもの。
 ハッシュIDのうち、先頭2文字をディレクトリ名に、残り38文字をファイル名にして保存します。
 
-ハッシュIDの確認方法
-`git hash-object second.md`
+- ハッシュIDの確認方法
+
+    ```bash
+    git hash-object second.md
+    ```
 
 #### treeコマンドのインストール方法
 
 ＜Macの場合＞
-Homebrewを使ってインストールする。
-ターミナルで下記コマンドを実行する。
-`brew install tree`
 
-ファイル構造を表示
-`tree .git`
+- Homebrewを使ってインストールする。
 
-masterブランチ上での最後のコミットが指しているツリーファイルの中身を表示
-`git cat-file -p master^{tree}`
+    ターミナルで下記コマンドを実行する。
+
+    ```bash
+    brew install tree
+    ```
+
+- ファイル構造を表示
+
+    ```bash
+    tree .git
+    ```
+
+- masterブランチ上での最後のコミットが指しているツリーファイルの中身を表示
+
+    ```bash
+    git cat-file -p master^{tree}
+    ```
 
 ---
 
@@ -276,26 +314,53 @@ masterブランチ上での最後のコミットが指しているツリーフ�
 
 - プロジェクトのディレクトリ作成
 
-```bash
-cd ~/desktop
-mkdir udemy_code
-cd udemy_code
-mkdir git_tutorial
-```
+    ```bash
+    cd ~/desktop
+    mkdir udemy_code
+    cd udemy_code
+    mkdir git_tutorial
+    ```
 
 - ディレクトリに移動
 
-```bash
-cd git_tutorial
-```
+    ```bash
+    cd git_tutorial
+    ```
 
 - ローカルリポジトリの作成
 
-.gitディレクトリが作成される
-（リポジトリ、インデックスファイル、設定ファイル）
+    .gitディレクトリが作成される
+    （リポジトリ、インデックスファイル、設定ファイル）
 
-```bash
-git init
-```
+    ```bash
+    git init
+    ```
+
+---
+
+### GitHub上にあるプロジェクトから始めよう
+
+- Gitリポジトリのコピーを作成する
+
+    ファイルと.gitディレクトリがコピーされる
+
+    ```bash
+    git clone "コピー"
+    ```
+
+    例：GitHubにあるAtomのデータをコピーしてみる
+    <https://github.com/atom/atom>
+
+    ```bash
+    cd ~/desktop/test_git
+    git clone https://github.com/atom/atom.git
+    ```
+
+    100%になったら、ちゃんと落ちているかを確認する
+
+    ```bash
+    cd atom
+    ls -a
+    ```
 
 ---
