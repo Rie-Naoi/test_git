@@ -773,7 +773,7 @@ blob（ブロブ）というのはカタマリという意味
   $git pull
 
   #これは下記コマンドと同じこと
-  $git fetch orign master
+  $git fetch origin master
   $git merge origin/master
   ```
 
