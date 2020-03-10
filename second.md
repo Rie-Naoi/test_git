@@ -808,3 +808,29 @@ blob（ブロブ）というのはカタマリという意味
 ---
 
 ## 40 リモートを変更・削除しよう
+
+- 例：
+  - 別のリモート名を使いたくなったとき
+  - リモートを使わなくなったとき
+
+- リモートを変更
+
+  ```bash
+  $git remote rename <旧リモート名> <新リモート名>
+  
+  #例：
+  $git remote rename tutorial new_tutorial
+  ```
+
+- リモートを削除
+
+  ```bash
+  $git remote rm <リモート名>
+
+  #例：
+  $git remote rm new_tutorial
+  ```
+
+---
+
+## 小テスト3：本章の復習
