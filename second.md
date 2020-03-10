@@ -509,3 +509,22 @@ blob（ブロブ）というのはカタマリという意味
 ---
 
 ## 27 GitHubにプッシュしよう
+
+- コミットしたら、その内容をGitHubにアップする
+  - リモートリポジトリ（GitHub）を新規追加する
+
+    ```bash
+    #originというショートカットでurlのリモートリポジトリを登録
+    $git remote add origin <htmls://github.com/user/repo.git
+    ```
+
+  - リモートリポジトリ(GitHub)へ送信する
+
+    ```bash
+    #ローカルリポジトリの内容をリモートリポジトリに送る＝プッシュ
+    $git push <リモート名> <ブランチ名>
+    $git push origin master
+
+    #以下にすると今後 origin masterを入力しなくてすむ
+    $git push -u origin master
+    ```
