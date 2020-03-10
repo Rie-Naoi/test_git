@@ -140,49 +140,49 @@ Chris Wanstrathが友達とコードをシェアしやすいものを作った
 - ユーザー名の登録
 
     ```bash
-    git config --global user.name "***"
+    $git config --global user.name "***"
     ```
 
 - メールアドレスの登録
 
     ```bash
-    git config --global user.email "**@**.com"
+    $git config --global user.email "**@**.com"
     ```
 
 - デフォルトコードエディタの登録（VSCode)
 
     ```bash
-    git congig --global core.editor 'code --wait'
+    $git congig --global core.editor 'code --wait'
     ```
 
 - ユーザー名の確認
 
     ```bash
-    git config user.name
+    $git config user.name
     ```
 
 - メールアドレスの確認
 
     ```bash
-    git config user.email
+    $git config user.email
     ```
 
 - デフォルトコードエディタの確認
 
     ```bash
-    git config core.editor
+    $git config core.editor
     ```
 
 - 一度に確認したい場合
 
     ```bash
-    git config --list
+    $git config --list
     ```
 
 - みやすく表示できる（ファイルの内容を表示する）
 
     ```bash
-    cat ~/.gitconfig
+    $cat ~/.gitconfig
     ```
 
 ---
@@ -278,7 +278,7 @@ blob（ブロブ）というのはカタマリという意味
 - ハッシュIDの確認方法
 
     ```bash
-    git hash-object second.md
+    $git hash-object second.md
     ```
 
 #### treeコマンドのインストール方法
@@ -290,19 +290,19 @@ blob（ブロブ）というのはカタマリという意味
     ターミナルで下記コマンドを実行する。
 
     ```bash
-    brew install tree
+    $brew install tree
     ```
 
 - ファイル構造を表示
 
     ```bash
-    tree .git
+    $tree .git
     ```
 
 - masterブランチ上での最後のコミットが指しているツリーファイルの中身を表示
 
     ```bash
-    git cat-file -p master^{tree}
+    $git cat-file -p master^{tree}
     ```
 
 ---
@@ -316,16 +316,16 @@ blob（ブロブ）というのはカタマリという意味
 - プロジェクトのディレクトリ作成
 
     ```bash
-    cd ~/desktop
-    mkdir udemy_code
-    cd udemy_code
-    mkdir git_tutorial
+    $cd ~/desktop
+    $mkdir udemy_code
+    $cd udemy_code
+    $mkdir git_tutorial
     ```
 
 - ディレクトリに移動
 
     ```bash
-    cd git_tutorial
+    $cd git_tutorial
     ```
 
 - ローカルリポジトリの作成
@@ -334,7 +334,7 @@ blob（ブロブ）というのはカタマリという意味
     （リポジトリ、インデックスファイル、設定ファイル）
 
     ```bash
-    git init
+    $git init
     ```
 
 ---
@@ -346,22 +346,22 @@ blob（ブロブ）というのはカタマリという意味
     ファイルと.gitディレクトリがコピーされる
 
     ```bash
-    git clone "コピー"
+    $git clone "コピー"
     ```
 
     例：GitHubにあるAtomのデータをコピーしてみる
     <https://github.com/atom/atom>
 
     ```bash
-    cd ~/desktop/test_git
-    git clone https://github.com/atom/atom.git
+    $cd ~/desktop/test_git
+    $git clone https://github.com/atom/atom.git
     ```
 
     100%になったら、ちゃんと落ちているかを確認する
 
     ```bash
-    cd atom
-    ls -a
+    $cd atom
+    $ls -a
     ```
 
 ---
@@ -374,9 +374,9 @@ blob（ブロブ）というのはカタマリという意味
 - 変更をステージに追加する
 
     ```bash
-    git add <ファイル名>
-    git add <ディレクトリ名>
-    git add .
+    $git add <ファイル名>
+    $git add <ディレクトリ名>
+    $git add .
     ```
 
 ---
@@ -386,9 +386,9 @@ blob（ブロブ）というのはカタマリという意味
 - 変更を記録すること＝コミット
 
     ```bash
-    git commit
-    git commit -m "<メッセージ>"　//メッセージをターミナルから
-    git commit -v //Gitが立ち上がる　変更・新規作成・削除・二数ファイルの変更、作成、削除
+    $git commit
+    $git commit -m "<メッセージ>" #メッセージをターミナルから
+    $git commit -v #Gitが立ち上がる　変更・新規作成・削除・二数ファイルの変更、作成、削除
     ```
 
 - わかりやすいコミットメッセージを書く
@@ -410,21 +410,38 @@ blob（ブロブ）というのはカタマリという意味
 - 現在の変更状況を確認（ステージにあげる必要があるかないか）
 
     ```bash
-    git status
+    $git status
     ```
 
 - ファイルを変更したら、ステージに追加する
 
     ```bash
-    git add <ファイル名>
+    $git add <ファイル名>
     ```
 
 - 現在の変更状況を確認する(addちゃんとできているか)
 
     ```bash
-    git status
+    $git status
     ```
 
 - コミットする
 
     >エディタをAtomからVSCodeに変更したため、動画と動作が異なるが把握しているので問題なし
+
+---
+
+### 23 何を変更したのかを確認しよう
+
+- コミットやステージに追加する前にどんな変更したかを確認する
+
+- 変更差分を確認する
+
+    ```bash
+    #git addする前の変更分
+    $git diff
+    $git diff <ファイル名>
+
+    #git addしたあとの変更分
+    $git diff --staged
+    ```
