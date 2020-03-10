@@ -538,3 +538,21 @@ blob（ブロブ）というのはカタマリという意味
 ---
 
 ## 29 コマンドにエイリアスをつけよう
+
+- コマンドの入力を短縮して入力を楽にしょう
+  - コマンドにエイリアスをつける
+  
+    ```bash
+    #--globalをつけるとPC全体の変更となる
+    $git config --global alias.ci commit
+    $git config --global alias.st status
+    $git config --global alias.br branch
+    $git config --global alias.co checkout
+
+    #登録されているエイリアスを表示させる
+    $git alias
+    ```
+
+---
+
+## 30 バージョン管理しないファイルは無視しよう
