@@ -1203,3 +1203,51 @@ $git branch -d pull_request
 >今後、このsecond.mdファイルを更新する際、上記のフローにのっとって対応していく
 
 ---
+
+## 54 リベースする
+
+マージの他にリベースがある  
+
+- リベースとは
+  変更を統合する際に、履歴をきれいに整えるために使うもの
+
+- リベースの一連の作業の流れ
+  - ブランチ（feature）に移動
+
+    ```bash
+    $git checkout <ブランチ名>
+  
+    #例：
+    $git checkout feature
+    ```
+
+  - ブランチの起点となるコミットを別のコミットに移動する
+
+    ```bash
+    $git rebase <ブランチ名>
+
+    #例：
+    $git rebase feature
+    ```
+
+  - ブランチ（master）に移動
+
+    ```bash
+    $git checkout <ブランチ名>
+  
+    #例：
+    $git checkout master
+
+    ```
+
+  - マージする
+
+    ```bash
+    $git merge <ブランチ名>
+  
+    #例：
+    $git checkout feature
+
+    ```
+
+---
