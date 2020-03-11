@@ -1352,3 +1352,43 @@ $git branch -d pull_request
 - 変更内容をとりこんだ履歴をちゃんと残したいとき
 
 ---
+
+## 57 プルの設定をリベースに変更する
+
+### プルには2つの型がある
+
+- マージ型
+- リベース型
+
+### どのように違うのか
+
+- プルのマージ型
+  マージコミットが残るから、マージしたという記録を残したい場合
+
+  ```bash
+  $git pull <リモート名> <ブランチ名>
+
+  #例：
+  $git pull origin master
+  ```
+
+- プルのりベース型
+  マージコミットが残らないので、GitHubの内容を取得したいだけの時はこちら
+
+  ```bash
+  $git pull --rebase <リモート名> <ブランチ名>
+
+  #例：
+  $git pull --rebase origin master
+  ```
+
+- プルをリベース型に設定する
+
+  ```bash
+  $git config --global pull.rebase true
+
+  #例：masterブランチでgit pullする時だけ
+  $git config branch.master.rebase true
+  ```
+
+  
