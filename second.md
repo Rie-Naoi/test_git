@@ -155,6 +155,10 @@ Chris Wanstrathが友達とコードをシェアしやすいものを作った
     $git congig --global core.editor 'code --wait'
     ```
 
+    設定がもう少し必要な模様（2020/03/11)  
+    GitのデフォルトエディタをVisual Studio Codeに設定  
+    <https://qiita.com/laughingman/items/3cce0effa0c9df8c00ad>
+
 - ユーザー名の確認
 
     ```bash
