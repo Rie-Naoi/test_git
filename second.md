@@ -1099,7 +1099,64 @@ blob（ブロブ）というのはカタマリという意味
 #自分がどのブランチにいるか確認する（master）
 $git branch
 
+#ローカルの内容を最新の情報に変更する
+$git pull origin master
 
+#最新の状態になっているか念のため確認する
+$git status
 
+#新しいブランチを作成し、移動する
+$git checkout -b pull_request
 
+#自分がどのブランチにいるか確認する（master）
+$git branch
 
+#ファイルの変更を加える（テキストエディタでなにかしらのファイル 今回はhome.html）
+
+#変更分をステージにaddする
+$git add home.index
+
+#変更をコミットする（コメントを入れる）
+$git commit
+
+#プッシュする
+$git push origin pull_request
+```
+
+- GitHubへ移動
+  - プルリクエストボタンを押す
+  - 「new pull request」ボタンを押す
+  - baseは「master」、compareに「purr_request」
+  - 「Create pull request」ボタンを押す
+  - タイトルを入力「例：pull requestを追記」
+  - 本文を入力「例：レビューお願いします」
+  - 「Create purr request」ボタンを押す
+  - コードレビュー依頼「Reviewers」を追加（メールで通知行く）
+- レビュアーはなにをするか
+  - プルリクエストボタンを押す
+  - 「pull requestを追記」をクリックし内容を確認する
+  - 修正してほしい行の横にプラスポタンが出てコメント追加できる
+    「Add single comment」で追加
+  - すべて確認が終わったら、「Review changes」を押す
+  - 「Approve」ボタンを押す（一人開発だと不可）
+  - 「Submit review」ボタンを押す
+  - 「Conversation」をクリック
+  - 「Merge pull request」ボタンを押す
+  - 「Confirm merge」ボタンを押す
+  - 「Delete branch」ボタンを押して不要なブランチを削除
+
+```bash
+#masterブランチに切り替える
+$git checkout master
+
+#自分がどのブランチにいるか確認する（master）
+$git branch
+
+#マージされた内容をローカルに落とす
+$git pull origin master
+
+#不要なブランチを削除
+$git branch -d pull_request
+```
+
+---
