@@ -1206,48 +1206,112 @@ $git branch -d pull_request
 
 ## 54 リベースする
 
-マージの他にリベースがある  
+### リベースとは
 
-- リベースとは
-  変更を統合する際に、履歴をきれいに整えるために使うもの
+マージの他にリベースがある
+変更を統合する際に、履歴をきれいに整えるために使うもの
 
-- リベースの一連の作業の流れ
-  - ブランチ（feature）に移動
+### リベースの一連の作業の流れ
 
-    ```bash
-    $git checkout <ブランチ名>
+- ブランチ（feature）に移動
+
+  ```bash
+  $git checkout <ブランチ名>
   
-    #例：
-    $git checkout feature
-    ```
+  #例：
+  $git checkout feature
+  ```
 
-  - ブランチの起点となるコミットを別のコミットに移動する
+- ブランチの起点となるコミットを別のコミットに移動する
 
-    ```bash
-    $git rebase <ブランチ名>
+  ```bash
+  $git rebase <ブランチ名>
 
-    #例：
-    $git rebase feature
-    ```
+  #例：
+  $git rebase feature
+  ```
 
-  - ブランチ（master）に移動
+- ブランチ（master）に移動
 
-    ```bash
-    $git checkout <ブランチ名>
+  ```bash
+  $git checkout <ブランチ名>
+
+  #例：
+  $git checkout master
+  ```
+
+- マージする
+
+  ```bash
+  $git merge <ブランチ名>
   
-    #例：
-    $git checkout master
+  #例：
+  $git checkout feature
+  ```
 
-    ```
+- 例：
 
-  - マージする
+  ```bash
+  #最新の状態になっているか念のため確認する
+  $git status
 
-    ```bash
-    $git merge <ブランチ名>
-  
-    #例：
-    $git checkout feature
+  #自分がどのブランチにいるか確認する（master）
+  $git branch
 
-    ```
+  #featureブランチを作成する
+  $git branch feature
+
+  #ブランチなにがあるか確認する（featureあるか）
+  $git branch
+
+- VSCodeへ移動
+  - 新規で「master2.html」ファイルを作成保存
+
+- ターミナルへ移動
+
+  ```bash
+  #ステージに上げる
+  $git add master2.html
+
+  #変更をコミットする（コメントを入れる）
+  $git commit
+
+  #ブランチをfeatureに切り替える
+  $git checkout feature
+  ```
+
+- VSCodeへ移動
+  - 新規で「feature2.html」ファイルを作成保存
+
+- ターミナルへ移動
+
+  ```bash
+  #ステージに上げる
+  $git add feature2.html
+
+  #変更をコミットする（コメントを入れる）
+  $git commit
+
+  #リベースする
+  $git rebase master
+
+  #リベースできたか確認する
+  $git log
+
+  #ブランチをmasterに切り替える
+  $git checkout master
+
+  #マージする
+  $git merge feature
+
+  #プッシュする
+  $git push origin master
+
+  #ブランチなにがあるか確認する（featureがあるか）
+  $git branch
+
+  #不要なブランチを削除
+  $git branch -d feature
+  ```
 
 ---
