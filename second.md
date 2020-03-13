@@ -1455,4 +1455,28 @@ $git branch -d pull_request
 ```bash
 #first.htmlという名前の空ファイルを作成する
 touch first.html
+
 ```
+
+---
+
+## 59 リベースで履歴を書き換える
+
+### コミットを並び替える、削除する
+
+  ```bash
+#履歴は古い順に表示されるので注意 git logとは逆
+  $git rebase -i HEAD~3
+
+  pick gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  pick 84gha0d README修正
+  ```
+
+  ```bash
+  #1.84gha0dのコミットを消す
+  #2.193054eを先に適用する
+
+  pick 193054e ファイル追加
+  pick gh21f6d ヘッダー修正
+  ```
