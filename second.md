@@ -1455,7 +1455,9 @@ $git branch -d pull_request
 ```bash
 #first.htmlという名前の空ファイルを作成する
 touch first.html
+
 ```
+
 ---
 
 ## 59 リベースで履歴を書き換える
