@@ -1391,4 +1391,68 @@ $git branch -d pull_request
   $git config branch.master.rebase true
   ```
 
-  
+---
+
+## 58 リベースで履歴を書き換えるその1
+
+- コミットをきれいに整えてからプッシュしたいときは履歴を書き換えよう
+  ※GitHubにプッシュしていないコミット
+
+### 直前のコミットをやり直す
+
+  ```bash
+  #リモートリポジトリにプッシュしたコミットはダメ
+  $git commit --amend
+  ```
+
+### 複数のコミットをやり直す
+
+  ```bash
+  #-iは、「interactive」対話的なリベース
+  $git rebase -i <コミットID>
+
+  #例：直前3つ分表示される
+  $git rebase -i HEAD~3
+
+  pick gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  pick 84gha0d README修正
+  ```
+
+  ```bash
+  #やり直したいcommitをeditにする
+  edit gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  pick 84gha0d README修正
+
+  #やり直したら実行する
+  $git commit --amend
+
+  #次のコミットへ進む（リベース完了）
+  $git rebase --continue
+  ```
+
+### コミットの指定の方法
+
+- HEAD~ （チルダ）
+  一番目の親を指定する。  
+  HEADを基点にして数値分の親コミットまで指定する  
+
+- HEAD^ （キャレット）
+  マージした場所の2番目の親を指定する  
+
+### rease -i コマンドの一連の流れ
+
+1. git rebase -iコマンドで対話的リベースモードに入る
+2. 修正したコミットをeditにしてコミットエディタを終了する
+3. editのコミットのところでコミットの適用が止まる
+4. git commit --amendコマンドで修正
+5. git rebase --continueで次のコミットへいく
+6. pickだとそのままのコミット内容を適用して次へいく
+
+### 練習
+
+```bash
+#first.htmlという名前の空ファイルを作成する
+touch first.html
+```
