@@ -1657,3 +1657,25 @@ $git stash list
 ```
 
 ---
+
+## 65 避難した作業を復元しよう
+
+### 避難した作業を復元する
+
+```bash
+#最新の作業を復元する（ステージの状況は復元されない）
+$git stash apply
+
+#ステージの状況も復元する
+$git stash apply --index
+```
+
+```bash
+#特定の作業を復元する
+$git stash apply [スタッシュ名]
+
+#例
+$git stash apply stash@{1}
+```
+
+---
