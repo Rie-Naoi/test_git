@@ -1679,3 +1679,25 @@ $git stash apply stash@{1}
 ```
 
 ---
+
+## 66 避難した作業を削除しよう
+
+### 避難した作業を削除する
+
+```bash
+#最新の作業を削除する
+$git stash drop
+```
+
+```bash
+#特定の作業を削除する
+$git stash drop [スタッシュ名]
+
+#例
+$git stash drop stash@{1}
+```
+
+```bash
+#全作業を削除する
+$git stash clear
+```
