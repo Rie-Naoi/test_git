@@ -1701,3 +1701,12 @@ $git stash drop stash@{1}
 #全作業を削除する
 $git stash clear
 ```
+
+---
+
+## 67 Gitコマンド集
+
+ファイル名：original.pdf  
+GitHubにアップロードした
+
+---
