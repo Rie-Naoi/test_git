@@ -1372,7 +1372,7 @@ $git branch -d pull_request
   $git pull origin master
   ```
 
-- プルのりベース型
+- プルのリベース型
   マージコミットが残らないので、GitHubの内容を取得したいだけの時はこちら
 
   ```bash
@@ -1465,7 +1465,7 @@ touch first.html
 ### コミットを並び替える、削除する
 
   ```bash
-#履歴は古い順に表示されるので注意 git logとは逆
+  #履歴は古い順に表示されるので注意 git logとは逆
   $git rebase -i HEAD~3
 
   pick gh21f6d ヘッダー修正
@@ -1480,3 +1480,51 @@ touch first.html
   pick 193054e ファイル追加
   pick gh21f6d ヘッダー修正
   ```
+
+### コミットをまとめる
+
+  ```bash
+  #履歴は古い順に表示されるので注意 git logとは逆
+  $git rebase -i HEAD~3
+
+  pick gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  pick 84gha0d README修正
+  ```
+
+  ```bash
+  #squashを指定するとそのコミットを直前のコミットとまとめる
+
+  pick gh21f6d ヘッダー修正
+  squash 193054e ファイル追加
+  squash 84gha0d README修正
+  ```
+
+### コミットを分割する
+
+  ```bash
+  #履歴は古い順に表示されるので注意 git logとは逆
+  $git rebase -i HEAD~3
+
+  pick gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  pick 84gha0d READMEとindexを修正
+  ```
+
+  ```bash
+  #コミットを分割する
+  pick gh21f6d ヘッダー修正
+  pick 193054e ファイル追加
+  edit 84gha0d READMEとindexを修正
+
+  #ステージングしていない状態に戻す
+  $git reset HEAD^
+
+  $git add README
+  $git commit -m "README修正"
+  $git add indeh.html
+  $git commit -m "index.html修正"
+  $git rebase --continue
+  ```
+
+---
